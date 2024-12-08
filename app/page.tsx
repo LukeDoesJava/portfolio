@@ -1,89 +1,85 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProfilePicture from "./components/ProfilePicture";
 import { motion } from "framer-motion";
 import { MoveDown } from "lucide-react";
+import ProjectCard from "./components/ProjectCard";
+import Navbar from "./components/Navbar";
+import ProjectsShowcaseComponent from "./components/ProjectsShowcase";
+import SkillsSection from "./components/SkillsSection";
 
 const Home = () => {
   return (
     <div className="flex flex-col min-h-screen text-white font-inter">
       {/* Top Navigation */}
-      <nav className="absolute top-0 right-0 p-6 space-y-4 text-right">
-        <a href="#home" className="font-bold text-yellow text-4xl">
-          HOME
-        </a>
-        <a href="#work" className="block font-bold text-4xl">
-          PROJECTS
-        </a>
-        <a href="#contact" className="block font-bold text-4xl">
-          CONTACT
-        </a>
-      </nav>
+      <Navbar />
+
       {/* Main Section */}
-      <main id="home" className="flex h-[90vh] bg-purple items-center justify-center px-6">
+      <main id="home" className="flex min-h-screen bg-grey items-center justify-center px-4 md:px-6">
         <div className="relative flex flex-col items-center sm:items-start sm:flex-row gap-6">
-          {/* Profile Picture with offset background */}
-          <div className="relative -top-6 -left-12 sm:-top-12 sm:-left-24">
-          {/* Yellow background circle */}
-          <div className="absolute w-[calc(100%+16px)] h-[calc(100%+16px)] -left-20 -top-20 bg-shaded-shaded-yellow rounded-full z-20 border-1 border-black opacity-100 shadow-md"></div>
-          <div className="absolute w-[calc(100%+16px)] h-[calc(100%+16px)] -left-12 -top-12 bg-shaded-yellow rounded-full z-20 border-1 border-black opacity-100 shadow-md"></div>
-          <div className="absolute w-[calc(100%+16px)] h-[calc(100%+16px)] -left-6 -top-6 bg-yellow rounded-full z-20 border-1 border-black opacity-100 shadow-md"></div>
-          {/* Profile Picture */}
-          <div className="relative z-20">
-            <ProfilePicture />
+            {/* Profile Picture with offset background */}
+            <div className="relative -top-6 -left-12 sm:-top-12 sm:-left-24">
+            {/* Yellow background circle */}
+            <div className="absolute w-[calc(100%+16px)] h-[calc(100%+16px)] -left-20 -top-20 bg-shaded-shaded-yellow rounded-full z-20 border-1 border-black opacity-100 shadow-md"></div>
+            <div className="absolute w-[calc(100%+16px)] h-[calc(100%+16px)] -left-12 -top-12 bg-shaded-yellow rounded-full z-20 border-1 border-black opacity-100 shadow-md"></div>
+            <div className="absolute w-[calc(100%+16px)] h-[calc(100%+16px)] -left-6 -top-6 bg-yellow rounded-full z-20 border-1 border-black opacity-100 shadow-md"></div>
+            {/* Profile Picture */}
+            <div className="relative z-20">
+              <ProfilePicture />
+            </div>
           </div>
-        </div>
+
           {/* Text Content */}
-          <div className="relative top-12 left-12 sm:top-8 sm:left-8">
-            <h1 className="text-6xl font-bold leading-tight">
+          <div className="relative text-center md:text-left mt-8 md:mt-0 md:top-8 md:left-8">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               {/* Greeting Text */}
               {["Hey", "there!"].map((word, wordIndex) => (
-              <span key={wordIndex} className="inline-block mr-2">
-                {word.split("").map((char, charIndex) => (
-                <motion.span
-                  key={charIndex}
-                  className="inline-block"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                  duration: 0.3,
-                  delay: (wordIndex * 4 + charIndex) * 0.05,
-                  ease: "easeOut"
-                  }}
-                >
-                  {char}
-                </motion.span>
-                ))}
-              </span>
+                <span key={wordIndex} className="inline-block mr-2">
+                  {word.split("").map((char, charIndex) => (
+                    <motion.span
+                      key={charIndex}
+                      className="inline-block"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.3,
+                        delay: (wordIndex * 4 + charIndex) * 0.05,
+                        ease: "easeOut"
+                      }}
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+                </span>
               ))}
               <br />
               {["I'm", "Luke"].map((word, wordIndex) => (
-              <span key={wordIndex} className="inline-block mr-2">
-                {word.split("").map((char, charIndex) => (
-                <motion.span
-                  key={charIndex}
-                  className="inline-block"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                  duration: 0.3,
-                  delay: (wordIndex * 5 + charIndex) * 0.05,
-                  ease: "easeOut"
-                  }}
-                >
-                  {char}
-                </motion.span>
-                ))}
-              </span>
+                <span key={wordIndex} className="inline-block mr-2">
+                  {word.split("").map((char, charIndex) => (
+                    <motion.span
+                      key={charIndex}
+                      className="inline-block"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.3,
+                        delay: (wordIndex * 5 + charIndex) * 0.05,
+                        ease: "easeOut"
+                      }}
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+                </span>
               ))}
             </h1>
-            <p className="mt-4 text-2xl font-black">
+            <p className="mt-4 text-xl md:text-2xl font-black">
               {/* Sub Text */}
               {[
-                "I am a software engineer,",
-                "specializing in",
-                "back-end development"
+                "Computer Science @ UVIC '26",
+                "Honors in software systems",
+                "Focus in back-end development",
               ].map((line, lineIndex) => (
                 <motion.span
                   key={lineIndex}
@@ -102,34 +98,33 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="absolute bottom-36 left-10 font-black text-lg text-yellow transform -rotate-12">
-          Scroll down <br />
-          to see more about me!
-        </div>
+
+        {/* Scroll indicator */}
         <motion.div
-      className="absolute bottom-32 left-56 font-black text-lg text-yellow"
-      animate={{
-        y: [0, -20, 0], // Moves up and down by 20px
-      }}
-      transition={{
-        duration: 2, // Duration of the animation
-        ease: "easeInOut",
-        repeat: Infinity, // Infinite loop
-      }}
-    >
-      <MoveDown size={48}/>
-    </motion.div>
+          className="absolute bottom-20 md:bottom-32 left-1/2 md:left-1/2 transform -translate-x-1/2 md:translate-x-0 font-black text-lg text-yellow"
+          animate={{
+            y: [0, -20, 0],
+          }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+            repeat: Infinity,
+          }}
+        >
+          <MoveDown size={48}/>
+        </motion.div>
       </main>
 
       {/* About Section */}
       <section
         id="about"
-        className="flex flex-1 flex-col items-center justify-center bg-background text-black py-32 px-6">
-        <div className="flex flex-col items-center sm:items-start sm:flex-row gap-8 max-w-4xl">
+        className="flex flex-1 flex-col items-center justify-center bg-ct-orange text-black py-16 md:py-32 px-4 md:px-6"
+      >
+        <div className="flex flex-col items-center md:items-start md:flex-row gap-8 max-w-4xl w-full">
           {/* About Content */}
-          <div className="bg-grey p-6 rounded-lg shadow-lg">
-            <h1 className="text-4xl text-white font-bold">Nice to meet you!</h1>
-            <p className="mt-4 text-white text-xl">
+          <div className="bg-grey p-4 md:p-6 rounded-lg shadow-lg w-full">
+            <h1 className="text-3xl items-center md:text-4xl text-white font-bold">[About me]</h1>
+            <p className="mt-4 text-white text-base md:text-xl leading-relaxed">
               My name is Luke Edwards, and I am currently studying Computer
               Science with Honours in Software Systems at the University of
               Victoria. Although I focus on back-end development, I am
@@ -156,7 +151,51 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>
+          
+        {/* Skills Section */}
+        <SkillsSection />
+
+        {/* Projects Section */}
+        <section 
+          id="projects"
+          className="flex flex-col items-center justify-center bg-ct-grey text-white py-16 md:py-32 px-4 md:px-6"
+        >
+          <div className="flex flex-col items-center md:items-start md:flex-row gap-8 max-w-4xl w-full">
+            {/* Projects Content */}
+            <div className="bg-ct-orange p-4 md:p-6 rounded-lg shadow-lg w-full">
+              <h1 className="text-3xl items-center text-ct-grey md:text-4xl text-white font-bold text-center">[Projects]</h1>
+              <ProjectsShowcaseComponent />
+            </div>
+          </div>
+        </section>
+            
+          {/* Contact Section */}
+          <section
+        id="contact"
+        className="flex flex-col items-center justify-center bg-gray-100 text-black py-16 md:py-32 px-4 md:px-6"
+      >
+        <div className="max-w-5xl w-full">
+          <h1 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8">
+            [Contact]
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-ct-grey p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <h2 className="text-2xl font-semibold text-white text-right mb-4">Email</h2>
+              <p className="text-white text-right">
+                <a href="mailto:luke0edwardss@gmail.com" className="hover:text-ct-orange">[luke0edwardss@gmail.com]</a>
+              </p>
+            </div>
+            <div className="bg-ct-grey p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <h2 className="text-2xl font-semibold text-white mb-4">Resume</h2>
+              <p className="text-white">
+                <a href="/assets/data/resume.pdf" download className="hover:text-ct-orange">[Click to download my resume]</a>
+              </p>
+            </div>
+          </div>
+          
+          </div>
+        </section>
+      </div>
   );
 };
 

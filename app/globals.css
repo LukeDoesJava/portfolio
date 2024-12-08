@@ -3,14 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --background: #D9D9D9;
+  --background: #eeba2c;
   --foreground: #171717;
-  --highlight-yellow: #FFFF00;
-  --shaded-yellow: #dada0c;
-  --shaded-shaded-yellow: #a3a30e;
-  --primary-purple: #5500ff;
+  --highlight-yellow: #eeba2c;
+  --shaded-yellow: #d4a115;
+  --shaded-shaded-yellow: #886a19;
+  --primary-purple: #201e0f;
   --footer-grey: #232323;
   --dark-red: #8B0000; /* Added dark-red color */
+  --ct-black: #000000;
+  --ct-grey: #161616;
+  --ct-contrast-grey: #212121;
+  --ct-light-grey: #565656;
+  --ct-orange: #eeba2c;
 }
 
 @media (prefers-color-scheme: dark) {

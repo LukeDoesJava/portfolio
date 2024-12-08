@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image, { ImageProps } from "next/image";
-import webselfie from "../assets/icons/webselfie1.jpg";
+import webselfie from "../assets/images/webselfie1.jpg";
 
 interface ProfilePictureProps {
     imageProps: Omit<ImageProps, "className">;
