@@ -115,43 +115,51 @@ const Home = () => {
         </motion.div>
       </main>
 
-      {/* About Section */}
-      <section
-        id="about"
-        className="flex flex-1 flex-col items-center justify-center bg-ct-orange text-black py-16 md:py-32 px-4 md:px-6"
-      >
-        <div className="flex flex-col items-center md:items-start md:flex-row gap-8 max-w-4xl w-full">
-          {/* About Content */}
-          <div className="bg-grey p-4 md:p-6 rounded-lg shadow-lg w-full">
-            <h1 className="text-3xl items-center md:text-4xl text-white font-bold">[About me]</h1>
-            <p className="mt-4 text-white text-base md:text-xl leading-relaxed">
-              My name is Luke Edwards, and I am currently studying Computer
-              Science with Honours in Software Systems at the University of
-              Victoria. Although I focus on back-end development, I am
-              currently seeking my first co-op position in software development.
-              <br />
-              <br />
-              Through both my academic and personal projects, I have gained lots of experience in all aspects of software development, including full-stack development, webdev, and mobile app development. 
-              My time working with the UVic Formula Motorsport team has also given me experience in embedded systems and real-time data processing.
-              Furthermore, this past summer I have helped co-develop an app with four of my peers, which has given me experience working in a team environment.
-              Even though I am still early in my career, I am confident that I can bring a lot of value to any team I join.
-              I am always eager to learn new things, and meet complex challenges with creative and effective solutions. 
-              <br />
-              <br />
-              When I am not working on my personal projects, my passion for video games and rock climbing keep me busy.
-              Video games have always been a big part of my life, and I love making personal mods for my favourite games.
-              <br />
-              <br />
-              I am currently seeking a co-op position for the summer and/or fall of 2025, and I am open to any opportunities that come my way.
-              If you would like to learn more about me, or have any questions, feel free to reach out to me through my socials or email.
-              <br />
-              <br />
-              I look forward to hearing from you!
-            </p>
-          </div>
-        </div>
-      </section>
-          
+     {/* About Section */}
+  <section
+    id="about"
+    className="flex flex-1 flex-col items-center justify-center bg-ct-orange text-black py-16 md:py-32 px-4 md:px-6"
+  >
+    <div className="flex flex-col items-center md:items-start md:flex-row gap-8 w-full">
+      
+      {/* Profile Picture */}
+      {/* About Content */}
+      <div className="bg-grey p-4 md:p-6 rounded-lg shadow-lg ">
+        <h1 className="text-3xl items-center md:text-4xl text-white font-bold">[About me]</h1>
+        <p className="mt-4 text-white text-base md:text-xl leading-relaxed">
+          My name is Luke Edwards, and I am currently studying Computer
+          Science with Honours in Software Systems at the University of
+          Victoria. Although I focus on back-end development, I am
+          currently seeking my first co-op position in software development.
+          <br />
+          <br />
+          Through both my academic and personal projects, I have gained lots of experience in all aspects of software development, including full-stack development, webdev, and mobile app development. 
+          My time working with the UVic Formula Motorsport team has also given me experience in embedded systems and real-time data processing.
+          Furthermore, this past summer I have helped co-develop an app with four of my peers, which has given me experience working in a team environment.
+          Even though I am still early in my career, I am confident that I can bring a lot of value to any team I join.
+          I am always eager to learn new things, and meet complex challenges with creative and effective solutions. 
+          <br />
+          <br />
+          When I am not working on my personal projects, my passion for video games and rock climbing keep me busy.
+          Video games have always been a big part of my life, and I love making personal mods for my favourite games.
+          <br />
+          <br />
+          I am currently seeking a co-op position for the summer and/or fall of 2025, and I am open to any opportunities that come my way.
+          If you would like to learn more about me, or have any questions, feel free to reach out to me through my socials or email.
+          <br />
+          <br />
+          I look forward to hearing from you!
+        </p>
+      </div>
+      <div className="flex-shrink-0 w-full md:w-1/2 flex justify-center">
+        <img
+          src="/images/about_me.png"
+          alt="About Me"
+          className="w-7/12 object-cover object-top shadow-lg"
+          />
+      </div>
+    </div>
+  </section>
         {/* Skills Section */}
         <SkillsSection />
 
@@ -163,7 +171,7 @@ const Home = () => {
           <div className="flex flex-col items-center md:items-start md:flex-row gap-8 max-w-4xl w-full">
             {/* Projects Content */}
             <div className="bg-ct-orange p-4 md:p-6 rounded-lg shadow-lg w-full">
-              <h1 className="text-3xl items-center text-ct-grey md:text-4xl text-white font-bold text-center">[Projects]</h1>
+              <h1 className="text-3xl items-center text-ct-grey md:text-4xl text-ct-black font-bold text-center">[Projects]</h1>
               <ProjectsShowcaseComponent />
             </div>
           </div>

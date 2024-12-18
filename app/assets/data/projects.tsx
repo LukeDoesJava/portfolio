@@ -5,7 +5,7 @@ const projects = [
     description: "A personal portfolio to showcase my skills and projects.",
     image: "/images/portfolio.png", 
     techStack: ["React", "Tailwind CSS", "TypeScript"],
-    repoLink: "https://github.com/username/portfolio",
+    repoLink: "https://github.com/LukeDoesJava/portfolio",
   },
   {
     descriptor: "WEB/MOBILE APP",
@@ -20,13 +20,13 @@ const projects = [
     description: "A Wireshark clone that can be used to compile TCP network information from packets in bulk.",
     image: "/images/wireshark.png", 
     techStack: ["Python", "Sockets"],
-    repoLink: "abc.come",
+    repoLink: "https://github.com/LukeDoesJava/TCP-Analyzer",
   },
   {
     descriptor: "OPERATING SYSTEMS",
     title: "Train scheduling system",
     description: "A thread scheduler with deadlock avoidance depicted in the form of a train station.",
-    image: "/images/trains.jpg", 
+    image: "/images/mts.png", 
     techStack: ["C", "OS"],
     repoLink: "",
   },
@@ -34,9 +34,8 @@ const projects = [
     descriptor: "ROBOTICS",
     title: "Arcade Claw machine",
     description: "A claw machine that picks up objects and drops them into a basket.",
-    image: "/images/portfolio.jpg", 
+    image: "/images/claw.png", 
     techStack: ["VexRobotics", "C"],
-    repoLink: "",
   },
   {
     descriptor: "PHYSICS SIMULATION",
@@ -44,7 +43,7 @@ const projects = [
     description: "A sandbox environment allowing users to interact with fluid physics.",
     image: "/images/fizzix.jpg", 
     techStack: ["C++"],
-    repoLink: "",
+    repoLink: "a",
   },
   // Add more projects here
 ];
