@@ -2,7 +2,6 @@ import { IconType } from 'react-icons';
 import { 
   FaC, 
   FaReact, 
-  FaGitAlt, 
   FaDocker, 
   FaFigma, 
   FaGithub,

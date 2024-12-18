@@ -8,7 +8,7 @@ const Navbar = () => {
       const scrollPosition = window.scrollY;
   
       // Loop through each section to find the active one
-      for (let section of sections) {
+      for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const offsetTop = element.offsetTop;

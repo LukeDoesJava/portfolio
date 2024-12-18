@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ProfilePicture from "./components/ProfilePicture";
 import { motion } from "framer-motion";
 import { MoveDown } from "lucide-react";
-import ProjectCard from "./components/ProjectCard";
 import Navbar from "./components/Navbar";
 import ProjectsShowcaseComponent from "./components/ProjectsShowcase";
 import SkillsSection from "./components/SkillsSection";
