@@ -195,7 +195,7 @@ const Home = () => {
             <div className="bg-ct-grey p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h2 className="text-2xl font-semibold text-white mb-4">Resume</h2>
               <p className="text-white">
-                <a href="/assets/data/resume.pdf" download className="hover:text-ct-orange">[Click to download my resume]</a>
+                <a href="documents/Resume_luke_edwards.pdf" download className="hover:text-ct-orange">[Click to download my resume]</a>
               </p>
             </div>
           </div>
