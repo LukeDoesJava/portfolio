@@ -13,6 +13,7 @@ const projects = [
     description: "A recipe sharing and generation platform based on ingredients found in your fridge.",
     image: "/images/krumbz.png", 
     techStack: ["Next.js", "Docker", "Python", "Typescript"],
+    detailsLink: "/projects/krumbz",
   },
   {
     descriptor: "NETWORKING",
@@ -34,8 +35,9 @@ const projects = [
     descriptor: "ROBOTICS",
     title: "Arcade Claw machine",
     description: "A claw machine that picks up objects and drops them into a basket.",
-    image: "/images/claw.png", 
+    image: "/images/projects/claw/claw.png", 
     techStack: ["VexRobotics", "C"],
+    detailsLink: "/projects/claw",
   },
   {
     descriptor: "PHYSICS SIMULATION",

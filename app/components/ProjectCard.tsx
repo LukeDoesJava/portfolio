@@ -1,5 +1,7 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub, FaBookOpen } from "react-icons/fa6";
+import { useRouter } from "next/navigation"; // Changed from 'next/router'
+
 interface ProjectCardProps {
   descriptor: string;
   title: string;
@@ -8,6 +10,7 @@ interface ProjectCardProps {
   techStack: string[];
   liveLink?: string;
   repoLink?: string;
+  detailsLink?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -17,14 +20,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
   techStack,
   repoLink,
+  detailsLink,
 }) => {
+  const router = useRouter();
+
+  const handleCardClick = () => {
+    if (detailsLink) {
+      router.push(detailsLink);
+    } else {
+      console.error("Details link is missing or invalid");
+      console.log("Details link:", detailsLink);
+    }
+  };
   return (
-    <div className="bg-ct-grey rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform">
-      <img
-        src={image}
-        alt={title}
-        className="w-full h-40 object-cover"
-      />
+    <div
+      className="bg-ct-grey rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform"
+    >
+      <img src={image} alt={title} className="w-full h-40 object-cover" />
       <div className="p-4">
         <span className="text-sm font-semibold text-ct-orange rounded-md">
           {descriptor}
@@ -41,17 +53,28 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </span>
           ))}
         </div>
-        <div className="flex justify-end items-end mt-4">
+        <div className="flex justify-end items-end mt-4 space-x-4">
+          {detailsLink && (
+            <button
+              onClick={handleCardClick}
+              className="text-ct-orange hover:underline flex items-center"
+            >
+              <div className="rounded-full border border-gray-300 p-2 hover:border-ct-orange transition">
+                <FaBookOpen className="inline-block text-2xl" />
+              </div>
+            </button>
+          )}
           {repoLink && (
             <a
               href={repoLink}
               target="_blank"
               rel="noopener noreferrer"
               className="text-ct-orange hover:underline flex items-center"
-              >
+              onClick={(e) => e.stopPropagation()}
+            >
               <div className="rounded-full border border-gray-300 p-2 hover:border-ct-orange transition">
-              <FaGithub className="inline-block text-2xl" />
-                </div>
+                <FaGithub className="inline-block text-2xl" />
+              </div>
             </a>
           )}
         </div>

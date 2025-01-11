@@ -111,11 +111,25 @@ const Home = () => {
         </motion.div>
       </main>
 
+      {/* Skills Section */}  
+      <SkillsSection />
+
+      {/* Projects Section */}
+      <section id="projects" className="bg-ct-light-grey text-white py-16 lg:py-24">
+        <div className="container mx-auto px-4">
+          <div className="bg-ct-orange p-6 rounded-lg shadow-lg">
+            <h2 className="text-2xl sm:text-3xl lg:text-6xl text-ct-black font-bold text-center mb-8">[Projects]</h2>
+            <ProjectsShowcaseComponent />
+          </div>
+        </div>
+      </section>
+      
+
       {/* About Section */}
       <section id="about" className="bg-ct-orange text-black py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-8 items-start">
-            <div className="bg-grey p-6 rounded-lg shadow-lg flex-1">
+            <div className="bg-ct-light-grey p-6 rounded-lg shadow-lg flex-1">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white font-bold mb-6">[About me]</h2>
               <div className="text-white text-base sm:text-lg space-y-4">
               <p className="mt-4 text-white text-base md:text-xl leading-relaxed">
@@ -135,7 +149,7 @@ const Home = () => {
                   When I am not working on my personal projects, my passion for video games and rock climbing keep me busy.
                   Video games have always been a big part of my life, and I love making personal mods for my favourite games.
                   <br />
-                  <br />
+                  <br />  
                   I am currently seeking a co-op position for the summer and/or fall of 2025, and I am open to any opportunities that come my way.
                   If you would like to learn more about me, or have any questions, feel free to reach out to me through my socials or email.
                   <br />
@@ -152,18 +166,6 @@ const Home = () => {
                 loading="lazy"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      <SkillsSection />
-
-      {/* Projects Section */}
-      <section id="projects" className="bg-ct-grey text-white py-16 lg:py-24">
-        <div className="container mx-auto px-4">
-          <div className="bg-ct-orange p-6 rounded-lg shadow-lg">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-ct-black font-bold text-center mb-8">[Projects]</h2>
-            <ProjectsShowcaseComponent />
           </div>
         </div>
       </section>

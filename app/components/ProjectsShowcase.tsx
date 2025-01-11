@@ -17,6 +17,7 @@ const ProjectsShowcase = () => {
               image={project.image}
               techStack={project.techStack}
               repoLink={project.repoLink}
+              detailsLink={project.detailsLink}
             />
           ))}
         </div>

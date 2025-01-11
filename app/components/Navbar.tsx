@@ -4,7 +4,7 @@ const Navbar = () => {
     const [activeSection, setActiveSection] = useState<string>("home");
     
     const handleScroll = () => {
-      const sections = ["home", "about", "skills", "projects", "contact"];
+      const sections = ["home", "skills", "projects", "about", "contact"];
       const scrollPosition = window.scrollY;
   
       // Loop through each section to find the active one
@@ -15,7 +15,7 @@ const Navbar = () => {
           const offsetHeight = element.offsetHeight;
   
           // If the scroll position is within the section
-          if (scrollPosition >= offsetTop - 50 && scrollPosition < offsetTop + offsetHeight) {
+          if (scrollPosition + 60 >= offsetTop - 60 && scrollPosition < offsetTop + offsetHeight) {
             setActiveSection(section);
           }
         }
@@ -28,40 +28,42 @@ const Navbar = () => {
     }, []);
   
       return (
-        <nav className="fixed top-0 left-0 right-0 p-4 md:p-6 z-50 bg-ct-gray bg-opacity-90 w-full md:w-auto">
-          <div className="flex justify-end space-x-4">
-            <a
-              href="#home"
-              className={`font-bold text-lg md:text-2xl hover:scale-105 transition-transform ${activeSection === "home" ? "text-yellow" : activeSection === "skills" ? "text-ct-grey" : "text-white"}`}
-            >
-              [^]
-            </a>
-            <a
-              href="#about"
-              className={`font-bold text-lg md:text-2xl hover:scale-105 transition-transform ${activeSection === "about" ? "text-ct-grey" : activeSection === "skills" ? "text-ct-grey" : "text-white"}`}
-            >
-              ABOUT
-            </a>
-            <a
-              href="#skills"
-              className={`font-bold text-lg md:text-2xl hover:scale-105 transition-transform ${activeSection === "skills" ? "text-yellow" : "text-white"}`}
-            >
-              SKILLS
-            </a>
-            <a
-              href="#projects"
-              className={`font-bold text-lg md:text-2xl hover:scale-105 transition-transform ${activeSection === "projects" ? "text-yellow" : activeSection === "skills" ? "text-ct-grey" : "text-white"}`}
-            >
-              PROJECTS
-            </a>
-            <a
-              href="#contact"
-              className={`font-bold text-lg md:text-2xl hover:scale-105 transition-transform ${activeSection === "contact" ? "text-yellow" : activeSection === "skills" ? "text-ct-grey" : "text-white"}`}
-            >
-              CONTACT
-            </a>
-          </div>
-        </nav>
+        <div className={activeSection !== "home" ? 'fixed top-0 left-0 right-0 h-16 bg-grey z-40' : ''}>
+          <nav className="fixed top-0 left-0 right-0 p-4 md:p-6 z-50 bg-ct-gray bg-opacity-90 w-full md:w-auto">
+            <div className="flex justify-end space-x-4">
+              <a
+                href="#home"
+                className={`font-bold text-lg md:text-2xl hover:scale-105 transition-transform ${activeSection === "home" ? "text-yellow" : "text-white"}`}
+              >
+                [^]
+              </a>
+              <a
+                href="#skills"
+                className={`font-bold text-lg md:text-2xl hover:scale-105 transition-transform ${activeSection === "skills" ? "text-yellow" : "text-white"}`}
+              >
+                SKILLS
+              </a>
+              <a
+                href="#projects"
+                className={`font-bold text-lg md:text-2xl hover:scale-105 transition-transform ${activeSection === "projects" ? "text-yellow" : "text-white"}`}
+              >
+                PROJECTS
+              </a>
+              <a
+                href="#about"
+                className={`font-bold text-lg md:text-2xl hover:scale-105 transition-transform ${activeSection === "about" ? "text-yellow" : "text-white"}`}
+              >
+                ABOUT
+              </a>
+              <a
+                href="#contact"
+                className={`font-bold text-lg md:text-2xl hover:scale-105 transition-transform ${activeSection === "contact" ? "text-yellow" : "text-white"}`}
+              >
+                CONTACT
+              </a>
+            </div>
+          </nav>
+        </div>
       );
     };
 
