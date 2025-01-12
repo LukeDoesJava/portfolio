@@ -29,7 +29,7 @@ const projects = [
     description: "A thread scheduler with deadlock avoidance depicted in the form of a train station.",
     image: "/images/mts.png", 
     techStack: ["C", "OS"],
-    repoLink: "",
+    repoLink: "https://github.com/LukeDoesJava/mts",
   },
   {
     descriptor: "ROBOTICS",
@@ -42,10 +42,10 @@ const projects = [
   {
     descriptor: "PHYSICS SIMULATION",
     title: "Fizzix",
-    description: "A sandbox environment allowing users to interact with fluid physics.",
+    description: "A sandbox environment allowing users to interact with fluid physics **IN ACTIVE DEVELOPMENT**.",
     image: "/images/fizzix.jpg", 
     techStack: ["C++"],
-    repoLink: "a",
+    repoLink: "",
   },
   // Add more projects here
 ];

@@ -3,18 +3,11 @@ import ProjectNav from "@/app/components/ProjectNav";
 export default function PortfolioProject() {
   const galleryItems = [
     {
-      src: "/images/projects/claw/claw-machine.jpg",
-      type: "image",
-      alt: "claw machine",
-      description: "Claw machine",
+      src: "/images/projects/krumbz/krumbz-account.gif",
+      type: "gif",
+      alt: "Krumbz account",
+      description: "Krumbz account creation",
       size: "large",
-    },
-    {
-      src: "/images/projects/claw/claw-machine-2.jpg",
-      type: "image",
-      alt: "claw machine",
-      description: "Claw machine",
-      size: "small",
     },
   ];
 
@@ -87,7 +80,20 @@ export default function PortfolioProject() {
               ${item.size === "portrait" ? "md:col-span-1 md:row-span-2" : ""}
               `}
             >
-              {item.type === "image" ? (
+              {item.type === "gif" ? (
+                <div className="relative w-full h-full">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-full h-full object-contain"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="absolute bottom-4 left-4 right-4 text-sm text-white">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ) : item.type === "image" ? (
                 <div className="relative aspect-square w-full h-full">
                   <img
                     src={item.src}
