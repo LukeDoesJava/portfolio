@@ -3,12 +3,27 @@ import ProjectNav from "@/app/components/ProjectNav";
 export default function PortfolioProject() {
   const galleryItems = [
     {
-      src: "/images/projects/krumbz/krumbz-account.gif",
-      type: "gif",
-      alt: "Krumbz account",
-      description: "Krumbz account creation",
-      size: "large",
+      src: "/images/projects/krumbz/krumbz_personal.mov",
+      type: "mov",
+      alt: "Krumbz personal",
+      description: "Viewing adding bookmarks, and viewing the account page features",
+      size: "tall",
     },
+    {
+      src: "/images/projects/krumbz/krumbz_recipes.mov",
+      type: "mov",
+      alt: "Krumbz recipes",
+      description: "Viewing the tailored recipe suggestions and seeing recipes generated based on fridge ingredients",
+      size: "tall",
+    },
+    {
+      src: "/images/projects/krumbz/krumbz_vision.mov",
+      type: "mov",
+      alt: "Krumbz vision",
+      description: "Using the camera to input ingredients, adding them automatically to the fridge, and adding them manually ",
+      size: "tall",
+    },
+
   ];
 
   return (
@@ -57,6 +72,8 @@ export default function PortfolioProject() {
                 "Google Gemini API",
                 "Postman",
                 "Docker",
+                "xCode",
+                "Figma",
               ].map((tech, index) => (
                 <div
                   key={index}
