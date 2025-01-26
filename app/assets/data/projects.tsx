@@ -39,14 +39,14 @@ const projects = [
     techStack: ["VexRobotics", "C"],
     detailsLink: "/projects/claw",
   },
-  {
-    descriptor: "PHYSICS SIMULATION",
-    title: "Fizzix",
-    description: "A sandbox environment allowing users to interact with fluid physics **IN ACTIVE DEVELOPMENT**.",
-    image: "/images/fizzix.jpg", 
-    techStack: ["C++"],
-    repoLink: "",
-  },
+  // {
+  //   descriptor: "PHYSICS SIMULATION",
+  //   title: "Fizzix",
+  //   description: "A sandbox environment allowing users to interact with fluid physics **IN ACTIVE DEVELOPMENT**.",
+  //   image: "/images/fizzix.jpg", 
+  //   techStack: ["C++"],
+  //   repoLink: "",
+  // },
   // Add more projects here
 ];
 
